@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>Mi horóscopo</h1>
-    <form action="recibe-formulario" method="POST">
+    <a href="{{ route('informacion-personal.index') }}" class="btn btn-primary mb-3">Regresar a la lista</a>
+    <form action="{{ route('informacion-personal.store') }}" method="POST">
         @csrf
         <div class="mb-3>"
             <label for="nombre" class="form-label">
