@@ -11,6 +11,7 @@
     <a href="{{ route('informacion-personal.index') }}" class="btn btn-primary mb-3">Regresar a la lista</a>
     <form action="{{ route('informacion-personal.update', $informacionPersonal) }}" method="POST">
         @csrf
+        @method('PATCH')
         <div class="mb-3>"
             <label for="nombre" class="form-label">
                 Nombre:
