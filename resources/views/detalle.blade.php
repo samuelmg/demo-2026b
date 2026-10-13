@@ -23,5 +23,13 @@
     <a href="{{ route('informacion-personal.edit', $informacionPersonal->id) }}" class="btn btn-warning">
         Editar
     </a>
+
+    <form action="{{ route('informacion-personal.destroy', $informacionPersonal) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger">
+            Eliminar
+        </button>
+    </form>
 </body>
 </html>

@@ -75,6 +75,8 @@ class InformacionPersonalController extends Controller
      */
     public function destroy(InformacionPersonal $informacionPersonal)
     {
-        //
+        $informacionPersonal->delete();
+
+        return redirect()->route('informacion-personal.index');
     }
 }
